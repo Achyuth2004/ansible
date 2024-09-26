@@ -2,7 +2,7 @@
   hosts: web
   become: yes
   vars:
-    course: "DevOps with AWS"  # String (note the capitalization)
+    course: DevOps with AWS  # String (note the capitalization)
     Tools:  # List (also note the capitalization)
       - Linux
       - Shellscript
