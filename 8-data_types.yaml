@@ -1,8 +1,9 @@
+---
 - name: data types
   hosts: web
   become: yes
   vars:
-    course: DevOps with AWS  # String (note the capitalization)
+    course: "DevOps with AWS"  # String (note the capitalization)
     Tools:  # List (also note the capitalization)
       - Linux
       - Shellscript
@@ -11,8 +12,8 @@
       Devops: 2  # Numeric value
       AWS: 1
       Docker: "fresher"  # String value (in quotes)
-    Realtime project: true  # Boolean (no need for quotes)
+    realtime_project: true  # Boolean (no need for quotes)
   tasks:
     - name: Print variables
       ansible.builtin.debug:
-        msg: "Course: {{ course }}, Tools covered: {{ Tools }}, Experience is: {{ Experience }}, is real project: {{ Real-time project }}"
+        msg: "Course: {{ course }}, Tools covered: {{ Tools }}, Experience is: {{ Experience }}, is real project: {{ realtime_project }}"
