@@ -4,6 +4,7 @@
     course: DevOps with AWS
     Trainee: Achyuth
     Duration: 120hrs
+    #above are play level and below are task level variables
   tasks:
     - name: print info by vars
       vars: 
