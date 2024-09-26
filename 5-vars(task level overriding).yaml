@@ -1,0 +1,17 @@
+- name: variables
+  hosts: localhost
+  vars: 
+    course: DevOps with AWS
+    Trainee: Achyuth
+    Duration: 120hrs
+  tasks:
+    - name: print info by vars
+      vars: 
+        course: Azure Gen AI
+      ansible.builtin.debug:
+        msg: "I am learning {{course}} by the trainee {{Trainee}} with duration of {{Duration}}"
+    
+    - name: print info by vars
+      ansible.builtin.debug:
+        msg: "I am learning {{course}} by the trainee {{Trainee}} with duration of {{Duration}}"
+    
