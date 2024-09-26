@@ -13,6 +13,6 @@
       Docker: fresher
     Real-time project: true
     tasks:
-      - name: print variables
+      - name: 
         ansible.builtin.debug:
           msg: "Course: {{course}}, Tools covered: {{Tools}}, Experience is: {{Experience}}, is real project: {{RealProject}}"
