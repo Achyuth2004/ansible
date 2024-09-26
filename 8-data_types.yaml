@@ -11,7 +11,7 @@
       Devops: 2  # Numeric value
       AWS: 1
       Docker: "fresher"  # String value (in quotes)
-    Real-time project: true  # Boolean (no need for quotes)
+    Realtime project: true  # Boolean (no need for quotes)
   tasks:
     - name: Print variables
       ansible.builtin.debug:
