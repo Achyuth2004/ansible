@@ -23,3 +23,12 @@
       ansible.builtin.debug:
         msg: "Hello ,This is {{greetings | lower}}"
 
+- name: finding unique values
+  hosts: web
+  vars:
+    values: [1,2,2,3,3,3,4,4,4,4]
+  tasks:
+    - name: printing unique value
+      ansible.builtin.debug:
+        msg: "Hello ,This is {{greetings | unique}}"
+
