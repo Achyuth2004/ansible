@@ -37,7 +37,6 @@
   vars:
     values: [23,35,48,69,90]
   tasks:
-    - name: printing unique values
+    - name: printing max and min values
       ansible.builtin.debug:
         msg: "max value: {{ values | max }}, min value: {{ values | min }}"
-
