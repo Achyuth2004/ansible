@@ -3,32 +3,31 @@
   tasks:
     - name: printing default value
       ansible.builtin.debug:
-        msg: "Hello ,This is {{course | default('Ansible')}}"
+        msg: "Hello, This is {{ course | default('Ansible') }}"
 
 - name: to uppercase
   hosts: web
   vars:
-    greetings: "hello ,good morning"
+    greetings: "hello, good morning"
   tasks:
     - name: printing uppercase value
       ansible.builtin.debug:
-        msg: "Hello ,This is {{greetings | upper}}"
+        msg: "Hello, This is {{ greetings | upper }}"
 
 - name: to lowercase
   hosts: web
   vars:
-    greetings: "hello ,good morning"
+    greetings: "hello, good morning"
   tasks:
-    - name: printing lowercaseercase value
+    - name: printing lowercase value
       ansible.builtin.debug:
-        msg: "Hello ,This is {{greetings | lower}}"
+        msg: "Hello, This is {{ greetings | lower }}"
 
 - name: finding unique values
   hosts: web
   vars:
     values: [1,2,2,3,3,3,4,4,4,4]
   tasks:
-    - name: printing unique value
+    - name: printing unique values
       ansible.builtin.debug:
-        msg: "Hello ,This is {{greetings | unique}}"
-
+        msg: "Unique values: {{ values | unique }}"
