@@ -31,3 +31,13 @@
     - name: printing unique values
       ansible.builtin.debug:
         msg: "Unique values: {{ values | unique }}"
+
+- name: finding max and min values
+  hosts: web
+  vars:
+    values: [23,35,48,69,90]
+  tasks:
+    - name: printing unique values
+      ansible.builtin.debug:
+        msg: "max value: {{ values | max }}, min value: {{ values | min }}"
+
