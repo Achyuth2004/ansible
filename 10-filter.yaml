@@ -1,0 +1,25 @@
+- name: applying filters
+  hosts: web
+  tasks:
+    - name: printing default value
+      ansible.builtin.debug:
+        msg: "Hello ,This is {{course | default('Ansible')}}"
+
+- name: to uppercase
+  hosts: web
+  vars:
+    greetings: "hello ,good morning"
+  tasks:
+    - name: printing uppercase value
+      ansible.builtin.debug:
+        msg: "Hello ,This is {{greetings | upper}}"
+
+- name: to lowercase
+  hosts: web
+  vars:
+    greetings: "hello ,good morning"
+  tasks:
+    - name: printing lowercaseercase value
+      ansible.builtin.debug:
+        msg: "Hello ,This is {{greetings | upper}}"
+
