@@ -4,8 +4,8 @@
   tasks:
     - name: printing with Loops
       ansible.builtin.debug:
-        msg: "Hello {{my_items}}"
-      loops:
-      - linux
-      - shell
-      - ansible
+        msg: "Hello {{ item }}"
+      loop:
+        - linux
+        - shell
+        - ansible
