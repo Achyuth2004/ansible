@@ -1,10 +1,11 @@
 - name: Loops in YAML
   hosts: web
+  become: yes 
   tasks:
     - name: printing with Loops
       ansible.builtin.debug:
-        msg: "Hello {{ my_items }}"
+        msg: "Hello {{my_items}}"
       loops:
-         - linux
-         - shell
-         - ansible
+      - linux
+      - shell
+      - ansible
