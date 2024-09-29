@@ -40,3 +40,19 @@
     - name: printing max and min values
       ansible.builtin.debug:
         msg: "max value: {{ values | max }}, min value: {{ values | min }}"
+
+- name: converting dictionary to items
+  hosts: web
+  vars:
+     my_dict:
+        course: DevOps with AWS
+        Trainee: Achyuth
+        Duration: 120hrs
+  tasks:
+  - name: "before converting "
+    ansible.builtin.debug:
+      msg: "Before converting: {{ my_dict }}"
+  - name: "after converting"
+    ansible.builtin.debug:
+      msg: "After converting:{{ my_dict | dict2items }}"
+        
